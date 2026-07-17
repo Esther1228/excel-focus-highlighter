@@ -5,14 +5,14 @@
   xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
   xsi:type="TaskPaneApp">
   <Id>ba90f75d-d753-4a3a-a7c1-07ccdc5644d8</Id>
-  <Version>1.0.0.0</Version>
+  <Version>1.0.1.0</Version>
   <ProviderName>Local Tools</ProviderName>
   <DefaultLocale>zh-CN</DefaultLocale>
   <DisplayName DefaultValue="聚焦高亮" />
   <Description DefaultValue="在 Excel 中自动高亮当前单元格所在的行和列。" />
   <IconUrl DefaultValue="https://esther1228.github.io/excel-focus-highlighter/assets/icon-32.png" />
   <HighResolutionIconUrl DefaultValue="https://esther1228.github.io/excel-focus-highlighter/assets/icon-80.png" />
-  <SupportUrl DefaultValue="https://esther1228.github.io/excel-focus-highlighter/taskpane.html" />
+  <SupportUrl DefaultValue="https://esther1228.github.io/excel-focus-highlighter/taskpane.html?v=1.0.1" />
   <AppDomains>
     <AppDomain>https://esther1228.github.io</AppDomain>
   </AppDomains>
@@ -25,7 +25,7 @@
     </Sets>
   </Requirements>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://esther1228.github.io/excel-focus-highlighter/taskpane.html" />
+    <SourceLocation DefaultValue="https://esther1228.github.io/excel-focus-highlighter/taskpane.html?v=1.0.1" />
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
 
@@ -82,9 +82,9 @@
         <bt:Image id="Icon.80" DefaultValue="https://esther1228.github.io/excel-focus-highlighter/assets/icon-80.png" />
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Commands.Url" DefaultValue="https://esther1228.github.io/excel-focus-highlighter/taskpane.html" />
-        <bt:Url id="Taskpane.Url" DefaultValue="https://esther1228.github.io/excel-focus-highlighter/taskpane.html" />
-        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://esther1228.github.io/excel-focus-highlighter/taskpane.html" />
+        <bt:Url id="Commands.Url" DefaultValue="https://esther1228.github.io/excel-focus-highlighter/taskpane.html?v=1.0.1" />
+        <bt:Url id="Taskpane.Url" DefaultValue="https://esther1228.github.io/excel-focus-highlighter/taskpane.html?v=1.0.1" />
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://esther1228.github.io/excel-focus-highlighter/taskpane.html?v=1.0.1" />
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="聚焦高亮已安装" />
