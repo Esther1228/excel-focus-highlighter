@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>聚焦高亮</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/icon.svg" />
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <script type="module" crossorigin src="./assets/taskpane-C0AYTm30.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/taskpane-C9DCjuWY.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <div>
+          <h1>聚焦高亮</h1>
+          <p>选中单元格时，高亮当前行与列</p>
+        </div>
+        <svg class="header-mark" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4.75 8.5V5.75a1 1 0 0 1 1-1H8.5M15.5 4.75h2.75a1 1 0 0 1 1 1V8.5M19.25 15.5v2.75a1 1 0 0 1-1 1H15.5M8.5 19.25H5.75a1 1 0 0 1-1-1V15.5" />
+          <path d="M9 12h6M12 9v6" />
+        </svg>
+      </header>
+
+      <section class="master-control" aria-labelledby="enabled-label">
+        <div class="control-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M5 9V5h4M15 5h4v4M19 15v4h-4M9 19H5v-4" /></svg>
+        </div>
+        <div class="master-copy">
+          <label id="enabled-label" for="enabled">启用聚焦高亮</label>
+        </div>
+        <label class="switch">
+          <input id="enabled" type="checkbox" checked />
+          <span class="switch-track" aria-hidden="true"></span>
+          <span class="sr-only">启用或停用聚焦高亮</span>
+        </label>
+      </section>
+
+      <section class="settings" aria-labelledby="settings-title">
+        <h2 id="settings-title">设置</h2>
+
+        <div class="choice-stack">
+          <label class="check-control">
+            <input id="highlight-row" type="checkbox" checked />
+            <span>高亮当前行</span>
+          </label>
+          <label class="check-control">
+            <input id="highlight-column" type="checkbox" checked />
+            <span>高亮当前列</span>
+          </label>
+        </div>
+
+        <div class="field-row color-row">
+          <div>
+            <label for="color">高亮颜色</label>
+          </div>
+          <div class="color-input-wrap">
+            <input id="color" type="color" value="#C6EFCE" />
+            <output id="color-value" for="color">#C6EFCE</output>
+          </div>
+        </div>
+
+        <div class="field-row intensity-row">
+          <label for="intensity">高亮强度</label>
+          <div class="range-wrap">
+            <input id="intensity" type="range" min="15" max="100" value="35" />
+            <output id="intensity-value" for="intensity">35%</output>
+          </div>
+        </div>
+      </section>
+
+      <section class="preview" aria-labelledby="preview-title">
+        <div class="section-heading">
+          <h2 id="preview-title">效果预览</h2>
+          <span>C3</span>
+        </div>
+        <div class="sheet-preview" aria-label="高亮第三行和 C 列的预览表格">
+          <div class="corner"></div>
+          <div class="column-head">A</div><div class="column-head">B</div><div class="column-head active">C</div><div class="column-head">D</div><div class="column-head">E</div>
+          <div class="row-head">1</div><div></div><div></div><div class="col-active"></div><div></div><div></div>
+          <div class="row-head">2</div><div></div><div></div><div class="col-active"></div><div></div><div></div>
+          <div class="row-head active">3</div><div class="row-active"></div><div class="row-active"></div><div class="row-active selected"></div><div class="row-active"></div><div class="row-active"></div>
+          <div class="row-head">4</div><div></div><div></div><div class="col-active"></div><div></div><div></div>
+          <div class="row-head">5</div><div></div><div></div><div class="col-active"></div><div></div><div></div>
+        </div>
+      </section>
+
+      <div id="error-banner" class="error-banner" role="alert" hidden></div>
+
+      <footer class="app-footer">
+        <div class="status" aria-live="polite">
+          <span id="status-dot" class="status-dot"></span>
+          <span id="status-text">正在连接 Excel…</span>
+        </div>
+        <button id="reset" type="button">恢复默认</button>
+      </footer>
+    </main>
+
+  </body>
+</html>
